@@ -105,6 +105,22 @@ Press `Q` in the console to gracefully stop the server.
 
 The `IISProxyServer` is a simple web page/endpoint (ASPX). Deploy the contents of the `IISProxyServer` folder to an IIS application (or virtual directory of your web server). Ensure that WebSocket support is enabled and active in IIS (Windows feature).
 
+### IIS Module Implementation
+
+The project now also includes an IIS module-based server implementation in `IISProxyServer/ModuleDLL`.
+
+- `module.cs` contains an `IHttpModule` implementation that can handle proxy traffic through IIS pipeline events.
+- `DataPacket.cs` mirrors the packet format used by the client proxy component.
+- `ModuleDLL.csproj` targets .NET Framework for IIS module deployment.
+
+This module option can be used as an alternative to the ASPX endpoint when deeper IIS pipeline integration is required.
+
+#### Module Deployment Notes:
+- Build `ModuleDLL` in Release mode.
+- Copy the output DLL to the IIS application `bin` folder (or GAC if your deployment model requires it).
+- Register the module in `web.config` under IIS modules configuration.
+- Ensure the application pool has required permissions and WebSocket support is enabled.
+
 ### IIS Requirements:
 - WebSocket Protocol enabled
 - ASP.NET support
