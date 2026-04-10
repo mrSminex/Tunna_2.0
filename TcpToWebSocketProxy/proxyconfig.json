@@ -1,7 +1,7 @@
 {
   "webSocketUrl": "ws://localhost/WebsiteDeployment/webSocketProxyMult/main.aspx",
-  "tcpBufferSize": 65400,
-  "webSocketBufferSize": 65400,
+  "tcpBufferSize": 63000,
+  "webSocketBufferSize": 63000,
   "maxWebSocketMessageSize": 1048576,
   "portMappings": [
     {

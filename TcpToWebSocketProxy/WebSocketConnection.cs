@@ -96,7 +96,7 @@ namespace TcpToWebSocketProxy
                 throw new InvalidOperationException("Handshake completion failed");
             }
 
-            Console.WriteLine($"[{DateTime.Now:HH:mm:ss.fff}] Handshake complete. Using AES encryption.");
+            Console.WriteLine($"[{DateTime.Now:HH:mm:ss.fff}] Handshake complete. Using AES encryption !!!");
         }
 
         // Вспомогательный метод: Получает одно полное сообщение (аналогично ReceiveMessagesAsync, но для одного сообщения)
