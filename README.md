@@ -146,3 +146,11 @@ This module option can be used as an alternative to the ASPX endpoint when deepe
 - Ensure WebSocket feature is enabled in IIS
 - Verify firewall settings allow WebSocket connections
 - Check that target TCP services are accessible from IIS server
+
+## Related Projects
+
+Tunna 2.0 continues and significantly develops the concept embedded in the following well-known tools:
+
+- [Tunna](https://github.com/SECFORCE/Tunna ) — original project from SECFORCE
+- [reGeorg](https://github.com/sensepost/reGeorg ) — a classic tunnel from SensePost
+- [Neo-reGeorg](https://github.com/L-codes/Neo-reGeorg ) — improved and up-to-date version of reGeorg
